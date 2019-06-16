@@ -79,7 +79,13 @@ class Template extends utils.Adapter {
             this.log.info("Bitte füllen Sie alle Einstellungen aus."); 
         } else {
         this.main();
-        setInterval(() => this.main(), 1800000);
+        if (!this.config.interval || this.config.interval < 30){
+            setInterval(() => this.main(), 1800000);
+        } else {
+            var interv = this.config.interval;
+            interv = interv * 60000;
+            setInterval(() => this.main(), interv);    
+        }
         }
     }
 
