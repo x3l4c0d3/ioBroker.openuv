@@ -1,0 +1,64 @@
+{
+    "common": {
+        "name": "openuv",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung"
+            }
+        },
+        "title": "OpenUV",
+        "titleLang": {
+            "en": "OpenUV adapter",
+            "de": "OpenUV Adapter"
+        },
+        "desc": {
+            "en": "adapter for openuv.io",
+            "de": "Adapter für openuv.io"
+        },
+        "authors": [
+            "x3l4 <x3l4@emailn.de>"
+        ],
+        "keywords": [
+            "ioBroker",
+            "openuv",
+            "Smart Home",
+            "home automation"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "openuv.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/x3l4c0d3/ioBroker.openuv/master/admin/openuv.png",
+        "readme": "https://github.com/x3l4c0d3/ioBroker.openuv/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "weather",
+        "compact": true,
+        "materialize": true,
+        "materializeTab": true,
+        "adminTab": {
+            "singleton": true,
+            "name": {
+                "en": "OpenUV",
+                "de": "OpenUV"
+            },
+            "link": "",
+            "fa-icon": "info"
+        },
+        "supportCustoms": true,
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": []
+}
