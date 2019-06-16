@@ -56,6 +56,18 @@ class Template extends utils.Adapter {
             native: {},
         });
 
+        await this.setObjectAsync('UV_Bewertung', {
+            type: 'state',
+            common: {
+                name: 'UV_Bewertung',
+                type: 'string',
+                role: 'info',
+                read: true,
+                write: true,
+            },
+            native: {},
+        });
+
         
         this.subscribeStates('*');
 
@@ -84,7 +96,13 @@ class Template extends utils.Adapter {
          var obj = JSON.parse(body);
          t.setStateAsync('UV', { val: obj.result.uv, ack: true });
          t.setStateAsync('UV_Max', { val: obj.result.uv_max, ack: true });
-         //t.log.info(body);
+         var bewertung = "unbekannt";
+         if (obj.result.uv < 3){ bewertung = "niedrig"}
+         if (obj.result.uv >= 3 && obj.result.uv < 6){ bewertung = "mäßig"}
+         if (obj.result.uv >= 6 && obj.result.uv < 8){ bewertung = "hoch"}
+         if (obj.result.uv >= 8 && obj.result.uv < 11){ bewertung = "sehr hoch"}
+         if (obj.result.uv > 11){ bewertung = "extrem"}
+         t.setStateAsync('UV_Bewertung', { val: bewertung, ack: true });
        });
     }
 

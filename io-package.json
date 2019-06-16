@@ -1,9 +1,12 @@
 {
     "common": {
         "name": "openuv",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "news": {
-            "0.0.1": {
+            "0.0.3": {
+                "en": "add UV State",
+                "de": "UV Bewertung hinzugefügt"
+            },"0.0.2": {
                 "en": "UV Index Table, Link API KEy",
                 "de": "UV Index Table, Link API KEy"
             },
