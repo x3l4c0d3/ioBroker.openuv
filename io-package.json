@@ -1,12 +1,17 @@
 {
     "common": {
         "name": "openuv",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "news": {
+            "0.0.4": {
+                "en": "add interval to config",
+                "de": "Abrufinterval zu Einstellungen hinzugefügt"
+            },
             "0.0.3": {
                 "en": "add UV State",
                 "de": "UV Bewertung hinzugefügt"
-            },"0.0.2": {
+            },
+            "0.0.2": {
                 "en": "UV Index Table, Link API KEy",
                 "de": "UV Index Table, Link API KEy"
             },
