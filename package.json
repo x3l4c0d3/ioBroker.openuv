@@ -1,6 +1,6 @@
 {
   "name": "iobroker.openuv",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "OpenUV iobroker adapter",
   "author": {
     "name": "x3l4",
