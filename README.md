@@ -4,6 +4,7 @@
 ## openuv adapter for ioBroker
 
 Adapter for openuv.io
+Get your API key and your destination coords on www.openuv.io 
 
 ## Changelog
 
