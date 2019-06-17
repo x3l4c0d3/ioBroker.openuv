@@ -68,6 +68,18 @@ class Template extends utils.Adapter {
             native: {},
         });
 
+        await this.setObjectAsync('UV_safe_exposure_time1', {
+            type: 'state',
+            common: {
+                name: 'UV_safe_exposure_time1',
+                type: 'number',
+                role: 'info',
+                read: true,
+                write: true,
+            },
+            native: {},
+        });
+
         
         this.subscribeStates('*');
 
@@ -109,6 +121,7 @@ class Template extends utils.Adapter {
          if (obj.result.uv >= 8 && obj.result.uv < 11){ bewertung = "sehr hoch"}
          if (obj.result.uv > 11){ bewertung = "extrem"}
          t.setStateAsync('UV_Bewertung', { val: bewertung, ack: true });
+         t.setStateAsync('UV_safe_exposure_time1', { val: obj.result.safe_exposure_time.st1, ack: true });
        });
     }
 
