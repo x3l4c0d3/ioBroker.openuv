@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "openuv",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "news": {
+            "0.0.5": {
+                "en": "add safe_exposure_time",
+                "de": "safe_exposure_time hinzugefügt"
+            },
             "0.0.4": {
                 "en": "add interval to config",
                 "de": "Abrufinterval zu Einstellungen hinzugefügt"

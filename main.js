@@ -80,6 +80,66 @@ class Template extends utils.Adapter {
             native: {},
         });
 
+        await this.setObjectAsync('UV_safe_exposure_time2', {
+            type: 'state',
+            common: {
+                name: 'UV_safe_exposure_time2',
+                type: 'number',
+                role: 'info',
+                read: true,
+                write: true,
+            },
+            native: {},
+        });
+
+        await this.setObjectAsync('UV_safe_exposure_time3', {
+            type: 'state',
+            common: {
+                name: 'UV_safe_exposure_time3',
+                type: 'number',
+                role: 'info',
+                read: true,
+                write: true,
+            },
+            native: {},
+        });
+
+        await this.setObjectAsync('UV_safe_exposure_time4', {
+            type: 'state',
+            common: {
+                name: 'UV_safe_exposure_time4',
+                type: 'number',
+                role: 'info',
+                read: true,
+                write: true,
+            },
+            native: {},
+        });
+
+        await this.setObjectAsync('UV_safe_exposure_time5', {
+            type: 'state',
+            common: {
+                name: 'UV_safe_exposure_time5',
+                type: 'number',
+                role: 'info',
+                read: true,
+                write: true,
+            },
+            native: {},
+        });
+
+        await this.setObjectAsync('UV_safe_exposure_time6', {
+            type: 'state',
+            common: {
+                name: 'UV_safe_exposure_time6',
+                type: 'number',
+                role: 'info',
+                read: true,
+                write: true,
+            },
+            native: {},
+        });
+
         
         this.subscribeStates('*');
 
@@ -122,6 +182,11 @@ class Template extends utils.Adapter {
          if (obj.result.uv > 11){ bewertung = "extrem"}
          t.setStateAsync('UV_Bewertung', { val: bewertung, ack: true });
          t.setStateAsync('UV_safe_exposure_time1', { val: obj.result.safe_exposure_time.st1, ack: true });
+         t.setStateAsync('UV_safe_exposure_time2', { val: obj.result.safe_exposure_time.st2, ack: true });
+         t.setStateAsync('UV_safe_exposure_time3', { val: obj.result.safe_exposure_time.st3, ack: true });
+         t.setStateAsync('UV_safe_exposure_time4', { val: obj.result.safe_exposure_time.st4, ack: true });
+         t.setStateAsync('UV_safe_exposure_time5', { val: obj.result.safe_exposure_time.st5, ack: true });
+         t.setStateAsync('UV_safe_exposure_time6', { val: obj.result.safe_exposure_time.st6, ack: true });
        });
     }
 
